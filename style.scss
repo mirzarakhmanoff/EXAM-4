@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Livvic", sans-serif;
+}
+
+@import "./styles/_comments.scss";
+@import "./styles/_footer.scss";
+@import "./styles/_header.scss";
+@import "./styles/_talent.scss";
+@import "./styles/_team.scss";
+@import "./styles/_about.scss";
+@import "./styles/_directos.scss";
+@import "./styles/_contact.scss";
+
+@mixin headers() {
+  font-family: Livvic;
+  font-size: 6em;
+  font-weight: 700;
+  line-height: 100px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1440px;
+
+  .getStart {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #f67e7e;
+    padding-block: 76px;
+    .second-button {
+      a {
+        color: black;
+        border: 2px solid black;
+      }
+    }
+  }
+}

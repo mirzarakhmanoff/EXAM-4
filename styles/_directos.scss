@@ -1,0 +1,112 @@
+.directors {
+  padding-block: 140px;
+  .directors-item {
+    max-width: 1110px;
+    margin: auto;
+  }
+  text-align: center;
+  background: #004047;
+
+  h2 {
+    font-family: Livvic;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 64px;
+  }
+  .director-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 50px;
+
+    .director-card {
+      width: 350px;
+      height: 253px;
+      padding: 20px;
+      background: #012f34;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h5 {
+        font-family: Livvic;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+        text-align: center;
+        color: #79c8c7;
+      }
+      span {
+        font-family: Livvic;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        color: #fff;
+      }
+      .plus-button {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        top: 90%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #f67e7e;
+
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+    .card-x {
+      .plus-button {
+        background: #79c8c7;
+      }
+    }
+  }
+}
+
+.clients {
+  text-align: center;
+  background: #012f34;
+  padding-block: 140px;
+
+  h2 {
+    font-family: Livvic;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 64px;
+  }
+  .clients-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1110px;
+    margin: auto;
+    img {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 856px) {
+  .clients-items {
+    flex-direction: column;
+    img {
+      margin-block: 20px;
+    }
+  }
+}

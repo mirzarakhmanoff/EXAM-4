@@ -1,0 +1,110 @@
+@mixin headers() {
+  font-family: Livvic;
+  font-size: 6em;
+  font-weight: 700;
+  line-height: 100px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #012f34;
+  padding-top: 140px;
+
+  .team-item {
+    max-width: 1110px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+    .team-left {
+      max-width: 445px;
+      h2 {
+        @include headers();
+        font-size: 48px;
+        line-height: 48px;
+        position: relative;
+        padding-top: 50px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 50px;
+          height: 4px;
+          background: #f67e7e;
+        }
+      }
+    }
+  }
+}
+.team-right {
+  max-width: 540px;
+  margin-top: 40px;
+  padding-bottom: 140px;
+
+  .team-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    .team-card-text {
+      margin-left: 23px;
+      h4 {
+        font-family: Livvic;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+        text-align: left;
+        color: #f67e7e;
+        padding-bottom: 16px;
+      }
+      p {
+        font-family: Livvic;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 25px;
+        text-align: left;
+        color: #ffffff;
+      }
+    }
+    .team-card-img {
+      img {
+        position: relative;
+        z-index: 9;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: #2c6269;
+        border-radius: 50%;
+
+        z-index: 1;
+        transform: translate(20%, 25%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .team-left {
+    width: 100%;
+    margin-left: 20px;
+    text-align: center;
+  }
+  .team-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .team-card-text {
+      padding: 40px;
+      align-items: center;
+      width: 320px;
+    }
+  }
+}

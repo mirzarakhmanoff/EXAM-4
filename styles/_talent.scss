@@ -1,0 +1,75 @@
+@mixin headers() {
+  font-family: Livvic;
+  font-size: 6em;
+  font-weight: 700;
+  line-height: 100px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.talent {
+  background: #014e56;
+
+  padding-block: 129px;
+  .talent-item {
+    max-width: 1110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .talent-title {
+    max-width: 539px;
+    h1 {
+      @include headers();
+
+      span {
+        color: #f67e7e;
+      }
+    }
+  }
+  .talent-text {
+    width: 445px;
+    p {
+      position: relative;
+      font-family: Livvic;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+      text-align: left;
+      color: #ffffff;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 4px;
+        background: #79c8c7;
+        transform: translate(0, -30px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1242px) {
+  .talent-text {
+    margin-top: 30px;
+  }
+  .comments-person {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .talent-title {
+    width: 100%;
+    margin-left: 20px;
+    font-size: 10px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .talent-text {
+    width: 100%;
+    margin: 30px;
+  }
+}

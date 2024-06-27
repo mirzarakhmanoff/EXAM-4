@@ -1,0 +1,134 @@
+@mixin links() {
+  font-family: Livvic;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header {
+  background: #014e56;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 1110px;
+      padding-top: 52px;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-logo {
+      margin-right: 80px;
+    }
+    .nav-items {
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        li {
+          margin-right: 40px;
+          a {
+            @include links();
+            transition: 0.5s;
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.nav-button {
+  a {
+    @include links();
+    border: 2px solid #ffffff;
+    padding: 9px 33px;
+    border-radius: 30px;
+    transition: 0.5s;
+    &:hover {
+      background: #ffffff;
+      color: #002529;
+    }
+  }
+}
+.hamburger {
+  display: none;
+  i {
+    width: 65px;
+    height: 65px;
+    font-size: 50px;
+    color: #ffffff;
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background: #2c6269;
+  display: none;
+  flex-direction: column;
+
+  .x-mark {
+    height: 65px;
+    font-size: 50px;
+    color: #ffffff;
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 60px;
+  }
+  .sidebar-items {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      li {
+        margin-right: 40px;
+        margin-bottom: 20px;
+        a {
+          @include links();
+        }
+      }
+    }
+  }
+
+  .nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    margin-inline: 15px;
+  }
+  .hamburger {
+    margin-right: -10px;
+  }
+  .nav-items {
+    display: none;
+  }
+  .nav-button {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
