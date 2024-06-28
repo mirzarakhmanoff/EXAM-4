@@ -705,9 +705,6 @@ header nav .nav-items ul li a:hover {
     max-width: 300px;
   }
 }
-.container {
-  max-width: 1440px;
-}
 .container .getStart {
   display: flex;
   align-items: center;
