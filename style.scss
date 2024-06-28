@@ -26,8 +26,6 @@
 }
 
 .container {
-  
-
   .getStart {
     display: flex;
     align-items: center;
@@ -39,6 +37,22 @@
         color: black;
         border: 2px solid black;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .getStart {
+    .second-button {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .getStart {
+    flex-direction: column;
+    .second-button {
+      margin-top: 20px;
     }
   }
 }

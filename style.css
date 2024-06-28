@@ -103,20 +103,19 @@
 footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   background: #002529;
 }
 footer .footer-item1 {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 730px;
+  justify-content: space-around;
+  width: 500px;
   padding-block: 50px;
 }
 footer .footer-item1-right {
-  max-width: 171px;
-  margin-left: 120px;
+  max-width: 165px;
 }
 footer .footer-item1-right p {
   font-family: Livvic;
@@ -172,17 +171,15 @@ footer .footer-item-link li a:hover {
 @media screen and (max-width: 700px) {
   .footer-item1 {
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
     margin: auto;
-    width: 100%;
+    width: 300px;
+  }
+  .footer-item1 .footer-item1-left {
+    margin: auto;
   }
   .footer-item1-right {
-    position: relative;
     margin: auto;
-    width: 200px;
-    left: -15px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .footer-item2 {
     text-align: center;
@@ -715,6 +712,20 @@ header nav .nav-items ul li a:hover {
 .container .getStart .second-button a {
   color: black;
   border: 2px solid black;
+}
+
+@media screen and (max-width: 800px) {
+  .getStart .second-button {
+    display: block;
+  }
+}
+@media screen and (max-width: 500px) {
+  .getStart {
+    flex-direction: column;
+  }
+  .getStart .second-button {
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
